@@ -67,8 +67,8 @@ class CollectionReference:
         query = Query(self, offset=offset)
         return query
 
-    def select(self, fields: List[str]) -> Query:
-        query = Query(self, select=fields)
+    def select(self, field_paths: List[str]) -> Query:
+        query = Query(self, projection=field_paths)
         return query
 
     def start_at(
